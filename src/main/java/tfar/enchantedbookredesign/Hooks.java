@@ -1,11 +1,11 @@
 package tfar.enchantedbookredesign;
 
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-
 import java.util.Map;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 
 public class Hooks {
 
@@ -38,9 +38,9 @@ public class Hooks {
 					int color = 0;
 
 					if (!ench.isCurse()) {
-							if (ench.type == null)
+							if (ench.category == null)
 									color = 0x6B541A;
-							else switch (ench.type) {
+							else switch (ench.category) {
 									case ARMOR:
 									case ARMOR_FEET:
 									case ARMOR_LEGS:
